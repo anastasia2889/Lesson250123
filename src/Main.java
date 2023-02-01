@@ -11,9 +11,11 @@ public class Main {
 
         int time1 = calculateTime(50);
         int time2 = calculateTime(100);
+        int time3= calculateTime(110);
 
         System.out.println(" Для дистанции 50 время = " + time1);
         System.out.println(" Для дистанции 100 время = " + time2);
+        System.out.println(" Для дистанции больше 100 = " + time3);
 
 
 
@@ -36,6 +38,8 @@ public class Main {
         if (osType == 0){
             if (deviceYear == currentYear){
                 System.out.println( " Установить облегченную весрию IOS");
+            }else{
+                System.out.println("  Установите обычную версию IOS");
             }
         } else{
            if (deviceYear == currentYear){
@@ -52,6 +56,9 @@ public class Main {
             time++;
          if(distance >60 && distance<=100){
              time++;
+             if(distance>100){
+                 return -1;
+             }
 
          }
 
