@@ -9,14 +9,8 @@ public class Main {
         determineVersionOS(1, 2015);
         determineVersionOS(1, 2023);
 
-        int time1 = calculateTime(50);
-        int time2 = calculateTime(100);
-        int time = calculateTime(1000);
-
-        System.out.println(" Для дистанции 50 время = " + time1);
-        System.out.println(" Для дистанции 100 время = " + time2);
-        System.out.println("Доставка невозможна");
-
+        int deliveryDistance = 95;
+        delivery(deliveryDistance);
 
 
     }
@@ -51,27 +45,23 @@ public class Main {
 
     }
 
-    public static int calculateTime(int distance) {
-        int time = 1;
-        if (distance >= 20 && distance <= 60) {
-            time++;
-            if (distance > 60 && distance <= 100) {
-                time++;
-                int time2 = -1;
-                if (time2 == -1) {
-                } else {
-                    System.out.println(" Доставка займет " + time);
+    public static boolean delivery(int deliveryDistance) {
+        if (20 >= deliveryDistance) {
+            System.out.println("Потребуется дней 1");
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            System.out.println("Потребуется дней 2");
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            System.out.println("Потребуется дней 3");
+        } else if (deliveryDistance > 100) {
+            System.out.println("Доставка не осуществляется");
 
-
-                }
-
-            }
 
         }
-
-        return time;
-
-
+        return false;
     }
 
+
 }
+
+
+
