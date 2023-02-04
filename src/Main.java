@@ -9,7 +9,8 @@ public class Main {
         determineVersionOS(1, 2015);
         determineVersionOS(1, 2023);
 
-        int deliveryDistance = 95;
+        int deliveryDistance = 110;
+
         delivery(deliveryDistance);
 
 
@@ -45,7 +46,7 @@ public class Main {
 
     }
 
-    public static boolean delivery(int deliveryDistance) {
+    public static int delivery(int deliveryDistance) {
         if (20 >= deliveryDistance) {
             System.out.println("Потребуется дней 1");
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
@@ -57,7 +58,7 @@ public class Main {
 
 
         }
-        return false;
+        return deliveryDistance;
     }
 
 
